@@ -1,18 +1,31 @@
 import React from "react";
-import HeroImg from '../Images/HeroImg.JPG';
-import BackBay from '../Images/BackBay.JPG';
-import TrainingBoards from '../Images/TrainingBoards.JPG';
-import Cove from '../Images/Cove.JPG';
-import MiniComp from '../Images/MiniComp.JPG';
+import Contact from "./Contact";
 
+import HeroImg from "../Images/HeroImg.JPG";
+import BackBay from "../Images/BackBay.JPG";
+import MiniComp from "../Images/MiniComp.JPG";
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
   return (
     <>
       <header
-        style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "50vh" }}
+        id="theBoulder"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "50vh",
+        }}
       >
-        <h1 style={{fontSize: "80px", textShadow: "2px 2px black"}}>The Boulder</h1>
+        <h1
+          style={{
+            fontSize: "80px",
+            textShadow: "2px 2px black",
+            textAlign: "center",
+          }}
+        >
+          The Boulder
+        </h1>
         <img
           style={{
             position: "absolute",
@@ -27,22 +40,16 @@ const HomeScreen = () => {
         />
       </header>
       <main>
-        <section
-          style={{
-            display: "grid",
-            gridTemplateColumns: "50% 50%",
-            gridAutoRows: "50vh",
-            marginLeft: "10%",
-            marginRight: "10%",
-          }}
-        >
+        <section className="layout">
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
               textAlign: "center",
-              margin: "10%",
+              margin: "10px",
+              padding: "10px",
             }}
           >
             <h2>Climbing for Everyone in the centre of Sheffield</h2>
@@ -58,8 +65,10 @@ const HomeScreen = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
               textAlign: "center",
-              margin: "10%",
+              margin: "10px 10px 30px 10px",
+              padding: "10px",
             }}
           >
             <h2>Register Online</h2>
@@ -68,7 +77,9 @@ const HomeScreen = () => {
               just fill out our online registration form and then come down any
               time you like.
             </p>
-            <button>Register Now</button>
+            <div className="button" onClick={props.openRegistration}>
+              Register Now
+            </div>
           </div>
         </section>
         <div style={{ height: "50vh" }}>
@@ -77,56 +88,54 @@ const HomeScreen = () => {
               objectFit: "cover",
               width: "80%",
               height: "100%",
-              marginLeft: "10%",
-              marginRight: "10%",
+
               opacity: "0.8",
+              margin: "0 10% 0 10%",
             }}
             alt="indoor climbing"
             src={BackBay}
           />
         </div>
         <section
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gridAutoRows: "50vh",
-            marginLeft: "10%",
-            marginRight: "10%",
-          }}
+          className="infoLayout"
         >
-          <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                margin: "10%",
-            }}
-          >
-            <h3>Opening Times</h3>
-            <p>Weekday: 10am-10pm</p>
-            <p>Weekends: 9am-8pm</p>
-          </div>
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
-              margin: "10%",
+            
             }}
           >
             <h3>Location</h3>
-            <p>10 Rocky Ln, Sheffield City Centre, Sheffield S1 2EF</p>
+            <p>10 Rocky Ln,</p>
+            <p> Sheffield City Centre,</p>
+            <p>Sheffield S1 2EF</p>
+          </div>
+
+          <div
+            id="info"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+         
+            }}
+          >
+            <h3>Opening Times</h3>
+            <p>Weekday: 10am-10pm</p>
+            <p>Weekends: 9am-8pm</p>
           </div>
 
           <div
             style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                margin: "10%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+      
             }}
           >
             <h3>Prices</h3>
@@ -138,21 +147,19 @@ const HomeScreen = () => {
         <div style={{ height: "50vh" }}>
           <img
             style={{
-                objectFit: "cover",
-                width: "80%",
-                height: "100%",
-                marginLeft: "10%",
-                marginRight: "10%",
-                opacity: "0.9"
+              objectFit: "cover",
+              width: "80%",
+              height: "100%",
+              marginLeft: "10%",
+              marginRight: "10%",
+              opacity: "0.9",
             }}
             alt="indoor climbing"
             src={MiniComp}
           />
         </div>
       </main>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <p>contact us form</p>
-      </div>
+      <Contact />
       <footer style={{ display: "flex", justifyContent: "center" }}>
         <h2>The Boulder</h2>
       </footer>
