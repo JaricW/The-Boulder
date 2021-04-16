@@ -20,7 +20,6 @@ function App() {
 
   const confirmRegistration = async () => {
     setRegisterConfirm(true);
-    console.log("yes this is it");
     setTimeout(function () {
       setRegisterConfirm(false);
     }, 5000);

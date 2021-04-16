@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { EmailConfirmation } from "./Confirmation";
+import allStyles from "../Styles/formStyle";
 
 const Contact = () => {
   const [emailConfirm, setEmailConfirm] = useState(false);
@@ -32,30 +33,12 @@ const Contact = () => {
       setEmailConfirm(false);
     }, 5000);
   };
+
+  const { contactLayout, contactFormLayout } = allStyles;
   return (
     <>
-      <section
-        id="contact"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          padding: "10px"
-        }}
-      >
-        <form
-          onSubmit={sendEmail}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "10px",
-            marginTop: "20px",
-            marginBottom: "20px",
-            border: "1px solid white",
-            borderRadius: "10px",
-            padding: "10px 10px 20px 10px"
-          }}
-        >
+      <section id="contact" style={contactLayout}>
+        <form onSubmit={sendEmail} style={contactFormLayout}>
           <h2>Contact Us</h2>
           <input type="text" placeholder="Name" name="name" required />
           <input
