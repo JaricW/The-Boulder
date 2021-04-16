@@ -75,8 +75,6 @@ code {
   }
 }
 
-
-
 h1,
 h2,
 h3,
@@ -102,6 +100,10 @@ h6 {
 
 p {
   font-family: 'Nunito', sans-serif;
+}
+
+img {
+  image-resolution: 5dpi;
 }
 
 .link {
