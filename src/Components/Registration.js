@@ -1,6 +1,5 @@
 import React from "react";
 import emailjs from "emailjs-com";
-import allStyles from "../Styles/formStyle";
 import COU from "./COU";
 
 const Registration = (props) => {
@@ -28,20 +27,12 @@ const Registration = (props) => {
     props.confirmRegistration();
   };
 
-  const {
-    registrationStyle,
-    regFormLayout,
-    headerStyle,
-    tickBoxStyle,
-    buttonHolderStyle,
-  } = allStyles;
-
   return (
     <>
-      <section style={registrationStyle}>
+      <section className="absolute z-20 bg-black md:mx-32">
         <form onSubmit={submitForm}>
-          <div style={regFormLayout}>
-            <h2 style={headerStyle}>Register Now</h2>
+          <div className="flex flex-col items-center text-center gap-2 p-5">
+            <h2 className="text-xl text-yellow-500">Register Now</h2>
             <label for="firstName">
               <p>First Name</p>
             </label>
@@ -82,19 +73,26 @@ const Registration = (props) => {
               Do you understand and agree to follow all of the above conditions
               of use?
             </p>
-            <div style={tickBoxStyle}>
+            <div className="flex justify-center items-center gap-2">
               <label for="agree">
                 <p>I understand & agree</p>
               </label>
               <input type="checkbox" id="agree" required />
             </div>
-            <input className="button" type="submit" value="Register Now" />
+            <input
+              className="text-yellow-500 bg-black p-2 border-2 border-current rounded-md hover:bg-yellow-500 hover:text-black hover:border-current"
+              type="submit"
+              value="Register Now"
+            />
           </div>
         </form>
-        <div style={buttonHolderStyle}>
-          <div className="button" onClick={props.closeRegistration}>
+        <div className="fixed top-3 left-3">
+          <button
+            className="text-yellow-500 bg-black p-2 border-2 border-current rounded-md hover:bg-yellow-500 hover:text-black hover:border-current"
+            onClick={props.closeRegistration}
+          >
             Go Back
-          </div>
+          </button>
         </div>
       </section>
     </>

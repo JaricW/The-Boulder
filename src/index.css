@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   background-color: #040c04;
 }
@@ -16,65 +20,6 @@ code {
     monospace;
 }
 
-.nav {
-  position: fixed;
-  z-index: 2;
-
-  margin: 0;
-  list-style-type: none;
-}
-
-@media only screen and (max-width: 1024px) {
-  .layout {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-rows: 60vh;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  .infoLayout {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px 10% 10px 10%;
-  }
-  .navContent {
-    display: none;
-  }
-
-  .nav:hover {
-  flex-direction: column;
-
-  }
-  .nav:hover .navContent {
-    display: block;
-  }
-
-}
-
-@media only screen and (min-width: 1024px) {
-  .layout {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-auto-rows: 50vh;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  .infoLayout {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 10px 10% 10px 10%;
-  }
-  .openMenu {
-    display: none;
-  }
-  .nav {
-    display: flex;
-    gap: 40px;
-    background-color: rgba(159, 163, 162, 0.6);
-    width: 100%;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -87,7 +32,7 @@ li {
 }
 
 h1 {
-  font-family: 'Zen Dots', cursive;
+  font-family: "Zen Dots", cursive;
 }
 
 h2,
@@ -95,43 +40,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 p {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 img {
   image-resolution: 5dpi;
-}
-
-.link {
-  color: orange;
-  padding: 10px;
-  border-radius: 10px;
-  text-shadow: 1px 1px black;
-}
-
-.link:hover {
-  color: #040c04;
-  background-color: orange;
-  cursor: pointer;
-  text-shadow: 0px 0px;
-}
-
-.button {
-  color: orange;
-  background-color: #040c04;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid orange;
-  text-shadow: 1px 1px black;
-}
-
-.button:hover {
-  color: #040c04;
-  background-color: orange;
-  cursor: pointer;
-  text-shadow: 0px 0px;
 }

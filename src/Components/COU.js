@@ -1,8 +1,6 @@
 import React from "react";
-import allStyles from "../Styles/formStyle";
 
 const COU = () => {
-  const { listStyle } = allStyles;
   return (
     <>
       <h3>Conditions of Use</h3>
@@ -54,7 +52,7 @@ const COU = () => {
         Before you climb in the centre you are expected to be competent in the
         basic safety knowledge required to use the centre.
       </p>
-      <ul style={listStyle}>
+      <ul className="text-left">
         <li>Avoid uncontrolled falls. </li>
         <li>
           Descend either by down-climbing, jumping or at least a controlled
